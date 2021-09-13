@@ -1,8 +1,6 @@
+const express = require('express')
 const getVideos = require('./services/notion')
+const PORT = process.env.PORT || 5000
 
-;(async () => {
-    const nVideoes = await getVideos()
-    console.log(nVideoes);
-})()
-
+const app = express()
 
