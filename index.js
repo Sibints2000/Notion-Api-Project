@@ -10,8 +10,9 @@ const database_id = process.env.NOTION_DATABASE_ID
 
 const getVideos = async () => {
     const payload = {
-        path: `databases/database_id/query`
+        path: `databases/${database_id}/query`,
+        method: 'POST'
     }
 
-    const data = await notion.request()
+    const {results} = await notion.request()
 }
