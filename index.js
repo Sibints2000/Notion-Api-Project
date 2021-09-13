@@ -14,7 +14,7 @@ const getVideos = async () => {
         method: 'POST'
     }
 
-    const {results} = await notion.request()
+    const {results} = await notion.request(payload)
 
     console.log(results);
 }
