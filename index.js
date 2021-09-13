@@ -17,13 +17,14 @@ const getVideos = async () => {
     const {results} = await notion.request(payload)
 
     const videos = results.map(page => {
-        console.log(page.properties.Description.rich_text[0]);
+        console.log(page.properties.Description.rich_text[0].text.content);
 
         return{
             id: page.id,
             title: page.properties.Name.title[0].text.content,
             date: page.properties.Date.date.start,
-            description: page.properties.Description.rich_text[0]
+            tags: page.properties.Tags.rich_text[0].text.content,
+            description: page.properties.Description.rich_text[0].text.content
         }
     })
 
