@@ -17,7 +17,7 @@ const getVideos = async () => {
     const {results} = await notion.request(payload)
 
     const videos = results.map(page => {
-        console.log(page);
+        console.log(page.properties.Description.rich_text[0]);
     })
 }
 getVideos()
