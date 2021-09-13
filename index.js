@@ -9,6 +9,6 @@ app.use(express.static('public'))
 app.get('/videos', async(req, res) => {
     const videos = await getVideos()
     res.json(videos)
-})y
+})
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`))
