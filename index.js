@@ -6,7 +6,7 @@ const notion = new Client({
     auth: process.env.NOTION_TOKEN
 })
 
-const databa
+const database_id = process.env.NOTION_DATABASE_ID
 
 const getVideos = async () => {
     const payload = {
