@@ -15,4 +15,7 @@ const getVideos = async () => {
     }
 
     const {results} = await notion.request()
+
+    console.log(results);
 }
+getVideos()
