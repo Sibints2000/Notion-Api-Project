@@ -28,7 +28,7 @@ const getVideos = async () => {
     return videos
 }
 
-(async => {
+;(async () => {
     const nVideoes = await getVideos()
     console.log(nVideoes);
 })()
