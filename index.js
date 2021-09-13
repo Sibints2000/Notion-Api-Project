@@ -18,6 +18,13 @@ const getVideos = async () => {
 
     const videos = results.map(page => {
         console.log(page.properties.Description.rich_text[0]);
+
+        return{
+            id: page.id,
+            title: page.properties.Name.title[0].text.content
+        }
     })
+
+    return videos
 }
 getVideos()
