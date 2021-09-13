@@ -6,7 +6,7 @@ const notion = new Client({
     auth: process.env.NOTION_TOKEN
 })
 
-const da
+const databa
 
 const getVideos = async () => {
     const payload = {
