@@ -12,7 +12,10 @@ const getVideosFromBackend = async () => {
 
 const addVideosToDom = async () => {
     const videos = await getVideosFromBackend()
-    console.log(videos);
+    
+    if(!loading) {
+        loadingEl.innerHTML = ''
+    }
 }
 
 addVideosToDom()
