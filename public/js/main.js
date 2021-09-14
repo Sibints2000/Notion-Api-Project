@@ -16,6 +16,19 @@ const addVideosToDom = async () => {
     if(!loading) {
         loadingEl.innerHTML = ''
     }
+
+    videos.forEach(video => {
+        const div = document.createElement('div')
+        div.className = 'video'
+        div.innerHTML = `
+            <h3>${video.title}</h3>
+            <ul>
+                <li><strong>Release Date: </strong> ${video.date}</li>
+                <li><strong>Description : </strong> ${video.decription}</li>
+            </ul>
+        `
+
+    })
 }
 
 addVideosToDom()
